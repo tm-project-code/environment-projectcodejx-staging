@@ -1,0 +1,40 @@
+
+Showing logs for build [32mtm-project-code-environment-pro-w7mf2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-m5tlk[0m
+{"level":"warn","ts":1586329922.9059896,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586329922.9064353,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mtm-project-code-environment-pro-w7mf2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-ntjjv[0m
+{"level":"warn","ts":1586329923.4335082,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1586329923.43493,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mtm-project-code-environment-pro-w7mf2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mtm-project-code-environment-pro-w7mf2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-tm-project-code-environment-pro-w7mf2-m4zrn[0m
+{"level":"warn","ts":1586329927.5243778,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586329928.545534,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/tm-project-code/environment-projectcode**-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mtm-project-code-environment-pro-w7mf2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:4891aee435b446d1cbbfc8d4a326313966d1e354,4:fe83a3be4aad6405a79f9771fd0d18399b930d69
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow fe83a3be4aad6405a79f9771fd0d18399b930d69: 4891aee435b446d1cbbfc8d4a326313966d1e354:
+DEBUG: ran git fetch --unshallow origin fe83a3be4aad6405a79f9771fd0d18399b930d69: 4891aee435b446d1cbbfc8d4a326313966d1e354: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 4891aee435b446d1cbbfc8d4a326313966d1e354
+DEBUG: ran git reset --hard 4891aee435b446d1cbbfc8d4a326313966d1e354 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge fe83a3be4aad6405a79f9771fd0d18399b930d69
+DEBUG: ran git merge fe83a3be4aad6405a79f9771fd0d18399b930d69 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 4891aee435b446d1cbbfc8d4a326313966d1e354..HEAD
+Merged SHA fe83a3be4aad6405a79f9771fd0d18399b930d69 with commit message 'chore: Promote python-ex2 to version 0.0.2' into base branch master
+
+Showing logs for build [32mtm-project-code-environment-pro-w7mf2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
